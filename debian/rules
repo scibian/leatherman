@@ -1,0 +1,22 @@
+#!/usr/bin/make -f
+# See debhelper(7) (uncomment to enable)
+# output every command that modifies files on the build system.
+#export DH_VERBOSE = 1
+
+
+# see FEATURE AREAS in dpkg-buildflags(1)
+export DEB_BUILD_MAINT_OPTIONS = hardening=+all
+
+
+%:
+	dh $@
+
+override_dh_auto_configure:
+	dh_auto_configure -- -DCMAKE_LIBRARY_PATH=$(DEB_HOST_MULTIARCH) -DLEATHERMAN_SHARED=ON
+
+override_dh_auto_test:
+	# Tests are locale-dependent
+	LC_ALL=C LC_CTYPE=C dh_auto_test
+
+override_dh_missing:
+	dh_missing --fail-missing

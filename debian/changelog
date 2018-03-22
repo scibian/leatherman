@@ -1,0 +1,14 @@
+leatherman (1.4.0+dfsg-1~bpo9+1) stretch-backports; urgency=medium
+
+  * Rebuild for stretch-backports.
+    - Loosen Build-Dependency on debhelper
+    - Tighten Build-Dependency on catch
+    - Adjust gbp configuration
+
+ -- Nicolas Dandrimont <olasd@debian.org>  Thu, 22 Mar 2018 15:17:58 +0100
+
+leatherman (1.4.0+dfsg-1) unstable; urgency=medium
+
+  * Initial release (Closes: #891226)
+
+ -- Apollon Oikonomopoulos <apoikos@debian.org>  Fri, 23 Feb 2018 15:01:44 +0200

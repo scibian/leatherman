@@ -1,0 +1,26 @@
+Author: Faidon Liambotis <paravoid@debian.org>
+Description: Install shared libraries under /usr/lib/$triplet
+Source: https://github.com/puppetlabs/leatherman/pull/230/
+Last-Update: 2017-02-25
+--- a/cmake/leatherman.cmake.in
++++ b/cmake/leatherman.cmake.in
+@@ -1,6 +1,8 @@
+ # This file contains utilities used by both leatherman and consuming
+ # projects.
+ 
++include(GNUInstallDirs)
++
+ # Save the directory containing other cmake script files.
+ # If we're top-level, this file is generated and dropped
+ # in a different directory from the other script files.
+@@ -76,8 +78,8 @@
+ macro(leatherman_install)
+     install(TARGETS ${ARGV}
+         RUNTIME DESTINATION bin
+-        LIBRARY DESTINATION lib${LIB_SUFFIX}
+-        ARCHIVE DESTINATION lib${LIB_SUFFIX})
++	LIBRARY DESTINATION "${CMAKE_INSTALL_LIBDIR}"
++	ARCHIVE DESTINATION "${CMAKE_INSTALL_LIBDIR}")
+ endmacro()
+ 
+ # Usage: add_cppcheck_dirs(dir1 dir2)
