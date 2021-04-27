@@ -1,3 +1,11 @@
+leatherman (1.4.0+dfsg-1~bpo9+1sci9u1) scibian9; urgency=medium
+
+  * Scibianization
+  * Remove d/gbp.conf from debian
+  * Back to d/compat 10 with dh 10
+
+ -- Rémi Palancher <remi-externe.palancher@edf.fr>  Tue, 27 Apr 2021 16:11:11 +0200
+
 leatherman (1.4.0+dfsg-1~bpo9+1) stretch-backports; urgency=medium
 
   * Rebuild for stretch-backports.
