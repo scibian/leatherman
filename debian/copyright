@@ -78,7 +78,9 @@ Comment: Vendored from https://github.com/artyom-beilis/nowide
 License: BSL-1.0
 
 Files: debian/*
-Copyright: 2018 Apollon Oikonomopoulos <apoikos@debian.org>
+Copyright:
+ 2018 Apollon Oikonomopoulos <apoikos@debian.org>
+ 2021 Scibian Project <legal@scibian.org>
 License: GPL-2+
  This package is free software; you can redistribute it and/or modify
  it under the terms of the GNU General Public License as published by
