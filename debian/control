@@ -3,7 +3,7 @@ Priority: optional
 Maintainer: Scibian Project <packaging@scibian.org>
 Build-Depends:
  cmake,
- debhelper (>= 11~),
+ debhelper (>= 10),
  libboost-dev,
  libboost-log-dev,
  libboost-locale-dev,
